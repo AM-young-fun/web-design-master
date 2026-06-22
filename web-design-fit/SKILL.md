@@ -118,6 +118,9 @@ Before finalizing, self-check:
 - What detail remains because it improves trust, clarity, status, speed, or desire?
 - Does the design feel intentionally concise or merely empty?
 - Does density match the business? High-end can be sparse and precise. Operational tools can be dense and ordered.
+- Does the first viewport show its complete intended content without clipping or being cut off at 414x896 mobile, 1440x900 desktop, and 1920x1080 desktop?
+- When glassmorphism, box shadows, blur, glow, or similar effects extend beyond a block, do text and images still align vertically, with enough padding for the effect to breathe instead of being abruptly clipped at the edge?
+- Do special visual effects preserve the row's overall composition and sense of air, rather than making the section feel like unrelated effects patched together?
 - Do microstates support the experience: hover, loading, empty states, errors, icons, spacing, type weight, image crop, CTA state, form behavior?
 
 Only mention detailed microstates when relevant to the task.
