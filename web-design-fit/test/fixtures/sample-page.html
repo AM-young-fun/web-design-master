@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Audit Fixture</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f8fafc;
+        color: #111827;
+      }
+
+      header {
+        height: 88px;
+        padding: 24px 80px;
+        background: #ffffff;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      main {
+        padding: 0 80px 80px;
+      }
+
+      section {
+        width: 960px;
+        margin-top: 6px;
+        padding: 40px;
+        background: #ffffff;
+      }
+
+      .hero {
+        background: #173b8f;
+        color: white;
+        animation: fade-in 2s ease both;
+      }
+
+      .proof {
+        margin-left: 42px;
+        background: #facc15;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+
+      .card {
+        min-height: 90px;
+        background: #ef4444;
+        color: white;
+        transition: transform 2s ease;
+      }
+
+      @keyframes fade-in {
+        from { opacity: 0.3; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Navigation</header>
+    <main>
+      <section class="hero">
+        <h1>Useful headline with visible weight</h1>
+        <p>Hero copy.</p>
+      </section>
+      <section class="proof">
+        <h2>Proof</h2>
+        <p>Evidence copy.</p>
+      </section>
+      <section class="cards">
+        <div class="card">A</div>
+        <div class="card">B</div>
+        <div class="card">C</div>
+      </section>
+    </main>
+  </body>
+</html>

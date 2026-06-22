@@ -135,6 +135,41 @@ Avoid semantic mismatch and template reflex.
 
 ## Response Pattern
 
+## Audit Tool
+
+For an existing page, gather page evidence before judging visual quality:
+
+```bash
+cd web-design-fit
+npm install
+npx playwright install chromium
+npm run audit -- <url>
+```
+
+When already inside an installed global skill, run the same commands from the `web-design-fit` skill directory. The script lives at `scripts/audit-page.mjs` and writes an audit folder under `audits/<timestamp>/` unless `--out <dir>` is passed.
+
+Artifacts:
+
+- `summary.json`: palette percentages, layout blocks, layout risks, animation samples, and artifact names.
+- `screenshot.png`: 1440x960 screenshot after network idle plus a 5 second wait.
+- `screenshot-no-motion.png`: same page after injecting CSS that effectively disables animations and transitions.
+- `layout-overlay.png`: screenshot with major blocks outlined and numbered.
+- `color-palette.png`: visual strips for dominant swatches and color families.
+
+Use the script output as evidence, not as the final verdict. The script reports signals; the AI still decides fit using business intent, analogies, narrative, materials, and taste guardrails.
+
+Read `summary.json` first. Inspect overlay and screenshots when layout, color, or animation signals look suspicious.
+
+Current checks:
+
+- Color: sampled pixels grouped into human-readable families, dominant swatches, accent candidates, and palette risks.
+- Layout: major semantic blocks and direct child blocks, with tight spacing, overlap, misalignment, and fragmentation signals.
+- Animation: screenshots at roughly 0s, 1s, 3s, and 5s, pixel-diff ratios, CSS animation/transition element counts, and unsettled-motion risk.
+
+The default viewport is `1440x960`.
+
+## Recommendation Format
+
 When enough context exists, structure recommendations as:
 
 1. Business intent.
