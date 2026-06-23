@@ -114,6 +114,10 @@ Simple is not the same as underdesigned. Minimal design still contains many deci
 
 Before finalizing, self-check:
 
+- Is the page split MECE by information type, without duplicated or mixed categories?
+- Is information ordered by importance from high to low, top to bottom and left to right?
+- Do same-level or same-type items share similar visual treatment?
+- Does the full site still include enough variation between sections so it does not feel mechanically repetitive?
 - What was removed, and why?
 - What detail remains because it improves trust, clarity, status, speed, or desire?
 - Does the design feel intentionally concise or merely empty?
